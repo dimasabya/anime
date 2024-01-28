@@ -42,7 +42,7 @@ const About = () => {
     const phone = "6281313977883";
     const messages = encodeURIComponent(message);
 
-    const URL = `https://api.whatsapp.com/send?phone=${phone}&email=${email}&ext=${messages}`;
+    const URL = `https://api.whatsapp.com/send?phone=${phone}&ext=${messages}`;
 
     window.open(URL, "_blank");
   };
