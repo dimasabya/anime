@@ -40,7 +40,7 @@ const About = () => {
   const handleSendWa = (e) => {
     e.preventDefault();
     const phone = "6281313977883";
-    const messages = encodeURIComponent(message);
+    const messages = encodeURIComponent(`Hai saya ${name}, email ${email}, ${message}`);
 
     const URL = `https://api.whatsapp.com/send?phone=${phone}&text=${messages}`;
 
