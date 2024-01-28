@@ -54,7 +54,7 @@ const About = () => {
         <Navbar handleShowModal={handleShowModal} handleShowModalCart={handleOpenCart} />
         <div className="mt-[4rem]">
           <div
-            className="w-full h-screen"
+            className="w-full h-screen bg-center md:bg-top"
             style={{
               backgroundImage: `url(${img})`,
               backgroundSize: "cover",
@@ -107,7 +107,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="my-4 bg-gray-300 w-[50%] mx-auto p-2">
+        <div className="my-4 bg-gray-300 md:w-[50%] mx-auto p-2">
           <h1 className="text-center my-2 text-2xl text-gray-900 font-semibold">
             For Order Please fill in this coloum
           </h1>
