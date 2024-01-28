@@ -7,7 +7,8 @@ import CartModal from "../featrures/cart/CartModal";
 import img from "../assets/baner.jpg";
 import imgRead from "../assets/anime-read.jpg";
 import imgWatch from "../assets/anime-watch.jpg";
-import imgProfile from "../assets/IMG20230425164009.jpg";
+import imgProfile from "../assets/dimas.png";
+import { NavLink } from "react-router-dom";
 
 const About = () => {
   const [isOenModal, setModal] = useState(false);
@@ -89,7 +90,7 @@ const About = () => {
             <div>
               <p className="text-center text-lg font-semibold">Profile</p>
               <div className="text-left my-4">
-                <p>Name: Desty Fadhila Hakim</p>
+                <p>Name: Dimas Abdul Yasir</p>
                 <p className="my-2">Work: Fullstack Web Developer and Ui/Ux</p>
                 <p>
                   Portofolio:{" "}
@@ -105,8 +106,12 @@ const About = () => {
               </div>
               <div>
                 <p>Contact Me:</p>
-                <i className="fa-brands fa-whatsapp mr-4 text-2xl hover:text-green-500"></i>
-                <i className="fa-brands fa-instagram text-2xl hover:text-green-500"></i>
+                <NavLink to={`https://api.whatsapp.com/send?phone=6281313977883`}>
+                  <i className="fa-brands fa-whatsapp mr-4 text-2xl hover:text-green-500"></i>
+                </NavLink>
+                <NavLink to={`https://www.instagram.com/dimasabya9/`}>
+                  <i className="fa-brands fa-instagram text-2xl hover:text-green-500"></i>
+                </NavLink>
               </div>
             </div>
           </div>
