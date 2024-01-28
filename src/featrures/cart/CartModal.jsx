@@ -26,7 +26,9 @@ const CartModal = ({ handleHideModal }) => {
 
     const phone = "6281313977883";
     const message = encodeURIComponent(
-      `Hallo saya ingin membeli komik ${msg.map((itm) => itm.title - itm.total)} dengan total ${cartTotal} items`
+      `Hallo saya ingin membeli komik ${msg
+        .map((itm) => `${itm.title} - ${itm.total}`)
+        .join(",")} dengan total ${cartTotal} items`
     );
 
     const URL = `https://api.whatsapp.com/send?phone=${phone}&text=${message}`;
