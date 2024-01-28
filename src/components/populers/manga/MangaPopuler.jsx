@@ -5,7 +5,7 @@ import { CircularProgress } from "@mui/material";
 
 const Loading = () => {
   return (
-    <div className="w-full h-screen relative text-center bg-red-500">
+    <div className="w-full h-screen relative text-center">
       <div className="absolute top-0 left-0 bottom-0 right-0">
         <CircularProgress />
       </div>
