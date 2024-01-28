@@ -23,7 +23,7 @@ const CartModal = ({ handleHideModal }) => {
     console.log(a);
 
     const phone = "6281313977883";
-    const message = encodeURIComponent(`Hallo saya ingin membeli komik ${a} dengan total ${cartTotal} items`);
+    const message = encodeURIComponent(`Hallo saya ingin membeli komik ${a.title} dengan total ${cartTotal} items`);
 
     const URL = `https://api.whatsapp.com/send?phone=${phone}&text=${message}`;
     window.open(URL, "_blank");
