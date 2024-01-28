@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Animes({ animes, animesWeek, animesLast }) {
   let week = "week";
@@ -11,14 +11,16 @@ function Animes({ animes, animesWeek, animesLast }) {
         <h1 className="text-2xl font-bold">Anime Populer Minggu ini</h1>
         <div className="grid grid-cols-2 md:grid-cols-5 md:gap-4 md:my-4">
           {animesWeek.map((anime, i) => (
-            <div key={i} className="p-2">
-              <img
-                src={anime.images.jpg.image_url}
-                alt=""
-                className="w-[125px] h-[135px] md:w-[250px] md:h-[250px] mx-auto"
-              />
-              <h3 className="mt-2 text-[.8rem] md:text-[1rem]">{anime.title}</h3>
-            </div>
+            <NavLink key={i} to={`/populer/anime/req?pop=${anime.mal_id}&type=week`}>
+              <div className="p-2">
+                <img
+                  src={anime.images.jpg.image_url}
+                  alt=""
+                  className="w-[125px] h-[135px] md:w-[250px] md:h-[250px] mx-auto"
+                />
+                <h3 className="mt-2 text-[.8rem] md:text-[1rem]">{anime.title}</h3>
+              </div>
+            </NavLink>
           ))}
         </div>
         <div className="border md:w-[400px] mx-auto p-2 bg-gray-400 hover:bg-gray-700">
