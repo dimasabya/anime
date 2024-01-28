@@ -45,6 +45,10 @@ const About = () => {
     const URL = `https://api.whatsapp.com/send?phone=${phone}&text=${messages}`;
 
     window.open(URL, "_blank");
+
+    setEmail("");
+    setMessage("");
+    setName("");
   };
   return (
     <>
