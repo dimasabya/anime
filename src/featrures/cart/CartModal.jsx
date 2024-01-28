@@ -18,7 +18,7 @@ const CartModal = ({ handleHideModal }) => {
   const handleBuy = () => {
     if (cartItem.length === 0) return;
     const msg = cartItem.map((m) => {
-      return { title: m.title, total: m.tota };
+      return { title: m.title, total: m.total };
     });
     console.log(msg);
     const { ...a } = msg;
@@ -34,13 +34,6 @@ const CartModal = ({ handleHideModal }) => {
     const URL = `https://api.whatsapp.com/send?phone=${phone}&text=${message}`;
     window.open(URL, "_blank");
   };
-
-  const msg = cartItem.map((m) => {
-    return { title: m.title, total: m.total };
-  });
-  console.log(msg);
-  const { ...a } = msg;
-  console.log(a);
 
   return (
     <ModalCart>
