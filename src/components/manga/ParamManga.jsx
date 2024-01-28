@@ -121,7 +121,7 @@ const ParamManga = () => {
               <p className="text-gray-400 text-[.9rem] my-4">Source: {idxManga.source}</p>
               <div className="">
                 <p>Tags:</p>
-                <div className="flex gap-2 my-2 ml-2">
+                <div className="flex flex-wrap gap-2 my-2 ml-2">
                   {idxManga.genres.map((gen, i) => (
                     <p key={i} className="border p-1 px-2">
                       {gen.name}
