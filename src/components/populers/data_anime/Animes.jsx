@@ -74,7 +74,7 @@ function Animes() {
         setPages(2);
         fetchAnime("favorite", setAnime, setAnimes, setAnimePage3);
       }
-      if (scroll > 3400.0) {
+      if (scroll > 3300.0) {
         setPages(3);
         fetchAnime("favorite", setAnime, setAnimes, setAnimePage3);
       }
@@ -257,7 +257,7 @@ function Animes() {
                 ))}
               </>
             )}
-            {scroll > 3404.0 && (
+            {scroll > 3330.0 && (
               <>
                 {animesPage3.map((anim, i) => (
                   <NavLink key={i} to={`anime/req?pop=${anim.mal_id}&type=3`}>
