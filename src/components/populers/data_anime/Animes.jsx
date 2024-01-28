@@ -257,7 +257,7 @@ function Animes() {
                 ))}
               </>
             )}
-            {scroll > 3410.0 && (
+            {scroll > 3404.0 && (
               <>
                 {animesPage3.map((anim, i) => (
                   <NavLink key={i} to={`anime/req?pop=${anim.mal_id}&type=3`}>
