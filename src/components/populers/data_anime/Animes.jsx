@@ -125,6 +125,7 @@ function Animes() {
     console.log("oke");
   }
 
+  console.log(scroll);
   return (
     <section className="w-full">
       <div className="p-4">
@@ -256,7 +257,7 @@ function Animes() {
                 ))}
               </>
             )}
-            {scroll > 3500.0 && (
+            {scroll > 3450.0 && (
               <>
                 {animesPage3.map((anim, i) => (
                   <NavLink key={i} to={`anime/req?pop=${anim.mal_id}&type=3`}>
