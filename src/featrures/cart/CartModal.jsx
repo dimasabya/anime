@@ -17,14 +17,18 @@ const CartModal = ({ handleHideModal }) => {
   };
   const handleBuy = () => {
     if (cartItem.length === 0) return;
+    const msg = cartItem.map((m) => m.title);
+    console.log(msg);
+    const { ...a } = msg;
+    console.log(a);
 
     const phone = "6281313977883";
-    const message = encodeURIComponent(`Hallo saya ingin membeli komik dengan total ${cartTotal} items`);
+    const message = encodeURIComponent(`Hallo saya ingin membeli komik ${a} dengan total ${cartTotal} items`);
 
     const URL = `https://api.whatsapp.com/send?phone=${phone}&text=${message}`;
     window.open(URL, "_blank");
   };
-  console.log(cartItem);
+
   return (
     <ModalCart>
       <div className="relative flex flex-col gap-6 p-1 sm:p-2 w-full lg:w-[900px]">
